@@ -1,3 +1,49 @@
-h1{
-    color: rebeccapurple;
+#wrapper {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "socials"
+        "main"
+        "footer";
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto;
+}
+
+@media screen and (min-width: 800px) {
+    #wrapper {
+        grid-template-areas:
+            "header header socials"
+            "main main main"
+            "footer footer footer";
+
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+
+        margin: 2vw;
+    }
+
+    .header {
+        position: fixed;
+    }
+
+    .header h1 {
+        margin-bottom: auto
+    }
+
+    .header h2 {
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+
+    .socials a {
+        justify-self: center;
+    }
+}
+
+.header {
+    grid-area: header;
+}
+
+.s ocials {
+    grid-area: socials;
 }
