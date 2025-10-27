@@ -22,11 +22,12 @@
         margin: 2vw;
     }
 
-    .header {
+    .header
+    {
         position: fixed;
     }
-
     .header h1 {
+        margin-top: auto;
         margin-bottom: auto
     }
 
@@ -35,15 +36,16 @@
         margin-top: auto;
     }
 
-    .socials a {
-        justify-self: center;
+    .socials{
+        display: flex;
+        justify-content: center;
     }
 }
 
-.header {
+.header h1{
     grid-area: header;
 }
 
-.s ocials {
+.socials {
     grid-area: socials;
 }
