@@ -3,29 +3,34 @@
     grid-template-areas:
         "header"
         "socials"
+        "photo"
+        "into"
         "main"
         "footer";
     grid-template-rows: auto auto auto auto;
     grid-template-columns: auto;
 }
 
+#Resume {
+    font-family: Impact;
+    text-decoration: dashed;
+    font-size: x-large;
+}
+
 @media screen and (min-width: 800px) {
     #wrapper {
         grid-template-areas:
             "header header socials"
+            "photo intro intro"
             "main main main"
             "footer footer footer";
 
         grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto auto auto auto;
 
         margin: 2vw;
     }
 
-    .header
-    {
-        position: fixed;
-    }
     .header h1 {
         margin-top: auto;
         margin-bottom: auto
@@ -36,16 +41,35 @@
         margin-top: auto;
     }
 
-    .socials{
-        display: flex;
-        justify-content: center;
+    .socials {
+        background-color: grey;
     }
-}
 
-.header h1{
-    grid-area: header;
-}
+    .header {
+        grid-area: header;
+        background-color: grey;
 
-.socials {
-    grid-area: socials;
+    }
+
+    .socials {
+        grid-area: socials;
+
+    }
+
+    #Intro {
+        grid-area: intro;
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        margin: 3em;
+    }
+
+    #Photo {
+        grid-area: photo;
+        margin-top: 2em;
+    }
+
+    .main {
+        grid-area: main;
+    }
 }
