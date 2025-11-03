@@ -2,6 +2,17 @@ body {
     background-color: rgb(60, 60, 60);
 }
 
+#project {
+    transition: step-start;
+    transition: ease-in-out 2s;
+}
+
+#github,
+#linkedin,
+#Resume {
+    color: rgb(187, 77, 77);
+}
+
 #wrapper {
     display: grid;
     grid-template-areas:
@@ -18,7 +29,45 @@ body {
 #Resume {
     font-family: Impact;
     text-decoration: dashed;
-    font-size: x-large;
+    font-size: xx-large;
+}
+
+#Photo {
+    grid-area: photo;
+    width: 400px;
+    height: 450px;
+}
+
+.header h1 {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: aquamarine;
+}
+
+.header h2 {
+    margin-bottom: auto;
+    margin-top: auto;
+    color: aquamarine;
+}
+
+.TechnicalSkills h2 {
+    margin-bottom: auto;
+    margin-top: auto;
+    color: aquamarine;
+    font-family: 'Franklin Gothic Medium'
+}
+
+
+
+
+.header {
+    grid-area: header;
+    background-color: rgb(60, 60, 60);
+}
+
+.socials {
+    grid-area: socials;
+    background-color: rgb(60, 60, 60);
 }
 
 @media screen and (min-width: 800px) {
@@ -35,45 +84,30 @@ body {
         margin: 2vw;
     }
 
-    .header h1 {
-        margin-top: auto;
-        margin-bottom: auto
-    }
-
-    .header h2 {
-        margin-bottom: auto;
-        margin-top: auto;
-    }
-
-    .socials {
-        background-color: rgb(60, 60, 60);
-    }
-
-    .header {
-        grid-area: header;
-        background-color: rgb(60, 60, 60);
-
-    }
-
-    .socials {
-        grid-area: socials;
-
-    }
-
     #Intro {
         grid-area: intro;
         display: flex;
         justify-self: center;
         align-items: center;
         margin: 3em;
+        color: rgb(187, 77, 77);
+        font-size: xxx-large;
+        font-family: 'Trebuchet';
     }
 
     #Photo {
         grid-area: photo;
         margin-top: 2em;
+        clip-path: circle();
+        width: 400px;
+        height: 550px;
+        overflow: hidden;
     }
 
     .main {
         grid-area: main;
+        color: aquamarine;
+        font-family: 'Franklin Gothic Medium';
     }
+
 }
