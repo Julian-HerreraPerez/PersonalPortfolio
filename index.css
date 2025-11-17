@@ -2,9 +2,18 @@ body {
     background-color: rgb(60, 60, 60);
 }
 
-#project {
+#project img {
     transition: step-start;
     transition: ease-in-out 2s;
+    transition: transform 0.5s ease;
+    width: 600px;
+    height: 400px;
+    clip-path: circle();
+    overflown: hidden;
+}
+
+#project:hover img {
+    transform: scale(1.1);
 }
 
 #github,
@@ -41,21 +50,16 @@ body {
 .header h1 {
     margin-top: auto;
     margin-bottom: auto;
-    color: aquamarine;
+    color: rgb(255, 255, 255);
 }
 
 .header h2 {
     margin-bottom: auto;
     margin-top: auto;
-    color: aquamarine;
+    color: rgb(255, 255, 255);
 }
 
-.TechnicalSkills h2 {
-    margin-bottom: auto;
-    margin-top: auto;
-    color: aquamarine;
-    font-family: 'Franklin Gothic Medium'
-}
+
 
 .header {
     grid-area: header;
@@ -103,8 +107,7 @@ body {
 
     .main {
         grid-area: main;
-        color: aquamarine;
+        color: rgb(255, 255, 255);
         font-family: 'Franklin Gothic Medium';
     }
-
 }

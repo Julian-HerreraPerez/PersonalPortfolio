@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(60, 60, 60);
+}
+
+h2 {
+    font-family: 'Trebuchet';
+    font-size: xx-large;
+    color: rgb(255, 255, 255);
+}
+
+#loch img {
+    grid-area: photo;
+    display: flex;
+    width: 1080px;
+    height: 600px;
+    justify-self: center;
+}
+
+#Description {
+    font-family: 'Franklin Gothic Medium';
+    font-size: x-large;
+    color: rgb(188, 98, 98);
+}
+
+#back {
+    display: back;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#Trailer {
+    font-family: 'Franklin Gothic Medium';
+    font-size: x-large;
+    color: rgb(188, 98, 98);
+}
+
+@media screen and (min-width: 800px) {
+    .wrapper {
+        grid-template-areas:
+            "back"
+            "title"
+            "main"
+            "photo";
+
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+
+        margin: 2vw;
+    }
+}
