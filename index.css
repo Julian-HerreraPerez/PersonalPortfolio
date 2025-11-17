@@ -2,7 +2,8 @@ body {
     background-color: rgb(60, 60, 60);
 }
 
-#project img {
+#project1 img, #project2 img, #project3 img {
+    display: flex;
     transition: step-start;
     transition: ease-in-out 2s;
     transition: transform 0.5s ease;
@@ -11,8 +12,19 @@ body {
     clip-path: circle();
     overflown: hidden;
 }
+#project1{
+    grid-area: main1;
+}
+#project2{
+    grid-area: main2;
+}
 
-#project:hover img {
+#project3{
+    grid-area: main3;
+}
+
+
+#project1:hover img,#project2:hover img,#project3:hover img {
     transform: scale(1.1);
 }
 
@@ -71,12 +83,13 @@ body {
     background-color: rgb(60, 60, 60);
 }
 
+
 @media screen and (min-width: 800px) {
     #wrapper {
         grid-template-areas:
             "header header socials"
             "photo intro intro"
-            "main main main"
+            "main1 main2 main3"
             "footer footer footer";
 
         grid-template-columns: auto auto auto;
@@ -105,8 +118,8 @@ body {
         overflow: hidden;
     }
 
+
     .main {
-        grid-area: main;
         color: rgb(255, 255, 255);
         font-family: 'Franklin Gothic Medium';
     }
