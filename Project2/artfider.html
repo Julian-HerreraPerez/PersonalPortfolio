@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="art.css">
+    <title>Document</title>
+</head>
+<div class="wrapper">
+    <h1>
+        <a id="back" href="../index.html"> &lt= Go Back </a>
+    </h1>
+
+    <body>
+        <h2 id="title">Click to vist site</h2>
+        <a id="project" href="https://people.rit.edu/jah3290/235/project2/" target="_blank"><img src="../logo.svg"
+                alt="Art Institute of Chicago"></a>
+
+        <h2>Project Description</h2>
+        <p class="Description">
+            For this project I chose to use the Art Institute of Chicago's API, to create an art
+            finder.<br>
+            The page works by taking in a request from the user using the search bar.<br>
+            Taking that term and using the API's search URL, it looks for any art that is related to the term.<br>
+            Each item that is returned has an API_Link URL, because the Art Institute uses another API to hold
+            their images.<br>
+            From there each artwork has an image id that when sandwiched between two URLs gives you the
+            image back.<br>
+            The images are then displayed to the users using the Materialize carousel framework, to create
+            a revolving gallery effect.
+        </p>
+        <p class="Description">
+            The special effort I put into this project is, first, making it look pleasing with the frame that appears
+            when a
+            search is done and the fact that it disappears when the image is clicked.<br>
+            Another part was the feature I created where, when the image is clicked, it becomes larger so users can view
+            the art
+            better.<br>
+            A description box about the piece is also displayed, and I created a way to close it so that users can look
+            at the
+            art piece without it obstructing the work.<br>
+            I also created a dropdown filter where a user can filter results based on whether the art is public domain,
+            modern,
+            a painting, or a sculpture.<br>
+            My final piece of special effort went into the favorites category. When a user likes a piece, they can add
+            it to
+            their favorites. This then adds the art image to the favorites area, where a smaller rounded image of the
+            artwork is
+            displayed with the title underneath.<br>
+            The favorites section also has a dropdown menu where users can select from their favorites and remove a
+            specific
+            artwork if they no longer want it.<br>
+            Both the images and dropdown menu are saved in local storage so users can always come back to the page to
+            look at
+            them.
+        </p>
+    </body>
+</div>
+
+</html>

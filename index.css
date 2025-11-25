@@ -2,7 +2,8 @@ body {
     background-color: rgb(60, 60, 60);
 }
 
-#project1 img, #project2 img, #project3 img {
+#project1 img,
+#project3 img {
     display: flex;
     transition: step-start;
     transition: ease-in-out 2s;
@@ -12,19 +13,28 @@ body {
     clip-path: circle();
     overflown: hidden;
 }
-#project1{
+
+#project2 img {
+    width: 600px;
+    height: 400px;
+}
+
+#project1 {
     grid-area: main1;
 }
-#project2{
+
+#project2 {
     grid-area: main2;
 }
 
-#project3{
+#project3 {
     grid-area: main3;
 }
 
 
-#project1:hover img,#project2:hover img,#project3:hover img {
+#project1:hover img,
+#project2:hover img,
+#project3:hover img {
     transform: scale(1.1);
 }
 
@@ -83,6 +93,12 @@ body {
     background-color: rgb(60, 60, 60);
 }
 
+#title {
+    color: white;
+    grid-area: photo;
+    z-index: 0;
+    margin-top: auto;
+}
 
 @media screen and (min-width: 800px) {
     #wrapper {
