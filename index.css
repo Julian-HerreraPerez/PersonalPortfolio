@@ -4,33 +4,18 @@ body {
 
 #project1 img,
 #project3 img {
-    display: flex;
-    transition: step-start;
-    transition: ease-in-out 2s;
-    transition: transform 0.5s ease;
     width: 600px;
     height: 400px;
-    clip-path: circle();
-    overflown: hidden;
+    object-fit: cover;
+    clip-path: circle(40%);
+    overflow: hidden;
+    transition: transform 0.5s ease;
 }
 
 #project2 img {
     width: 600px;
     height: 400px;
 }
-
-#project1 {
-    grid-area: main1;
-}
-
-#project2 {
-    grid-area: main2;
-}
-
-#project3 {
-    grid-area: main3;
-}
-
 
 #project1:hover img,
 #project2:hover img,
@@ -50,11 +35,13 @@ body {
         "header"
         "socials"
         "photo"
-        "into"
-        "main"
+        "Intro"
+        "main1"
+        "main2"
+        "main3"
         "footer";
-    grid-template-rows: auto auto auto auto;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
 }
 
 #Resume {
@@ -69,23 +56,15 @@ body {
     height: 450px;
 }
 
-.header h1 {
-    margin-top: auto;
-    margin-bottom: auto;
-    color: rgb(255, 255, 255);
-}
-
-.header h2 {
-    margin-bottom: auto;
-    margin-top: auto;
-    color: rgb(255, 255, 255);
-}
-
-
-
 .header {
     grid-area: header;
     background-color: rgb(60, 60, 60);
+}
+
+.header h1,
+.header h2 {
+    margin: 0;
+    color: white;
 }
 
 .socials {
@@ -97,25 +76,34 @@ body {
     color: white;
     grid-area: photo;
     z-index: 0;
-    margin-top: auto;
+}
+
+#project1 {
+    grid-area: main1;
+}
+
+#project2 {
+    grid-area: main2;
+}
+
+#project3 {
+    grid-area: main3;
 }
 
 @media screen and (min-width: 800px) {
     #wrapper {
         grid-template-areas:
             "header header socials"
-            "photo intro intro"
+            "photo Intro Intro"
             "main1 main2 main3"
             "footer footer footer";
-
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto auto auto;
-
         margin: 2vw;
     }
 
     #Intro {
-        grid-area: intro;
+        grid-area: Intro;
         display: flex;
         justify-self: center;
         align-items: center;
@@ -126,7 +114,6 @@ body {
     }
 
     #Photo {
-        grid-area: photo;
         margin-top: 2em;
         clip-path: circle();
         width: 400px;
@@ -134,9 +121,8 @@ body {
         overflow: hidden;
     }
 
-
     .main {
-        color: rgb(255, 255, 255);
+        color: white;
         font-family: 'Franklin Gothic Medium';
     }
 }
